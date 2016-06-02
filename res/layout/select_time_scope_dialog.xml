@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_transparent"
+    android:gravity="center_horizontal" >
+
+    <LinearLayout
+        android:id="@+id/pop_select_time_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_white"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/btn_select_part_time"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginLeft="@dimen/dp4"
+            android:layout_marginRight="@dimen/dp4"
+            
+            android:gravity="center"
+            android:text="8：00~22:00"
+            android:textColor="@color/bg_black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0.2"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/bg_gray"  />
+
+        <TextView
+            android:id="@+id/btn_select_all_day"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center"
+            android:text="全天"
+            android:textColor="@color/bg_black"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0.2"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/bg_gray"  />
+
+
+        <TextView
+            android:id="@+id/btn_select_time_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_marginBottom="@dimen/dp15"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/bg_black"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

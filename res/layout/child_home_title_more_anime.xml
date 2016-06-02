@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp160"
+        android:layout_marginBottom="@dimen/dp15"
+        android:background="@color/bg_white"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/rg_child_home_title_area_anime"
+            style="@style/radiogroup_row_style" >
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_all"
+                style="@style/radiobutton_title_style"
+                android:checked="true"
+                android:text="全部" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_cn"
+                style="@style/radiobutton_title_style"
+                android:text="大陆" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_hk"
+                style="@style/radiobutton_title_style"
+                android:text="香港" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_tw"
+                style="@style/radiobutton_title_style"
+                android:text="台湾" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_kr"
+                style="@style/radiobutton_title_style"
+                android:text="韩国" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_usa"
+                style="@style/radiobutton_title_style"
+                android:text="美国" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_area_jp"
+                style="@style/radiobutton_title_style"
+                android:text="日本" />
+        </RadioGroup>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <RadioGroup
+            android:id="@+id/rg_child_home_title_type_anime"
+            style="@style/radiogroup_row_style" >
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_all"
+                style="@style/radiobutton_title_style"
+                android:checked="true"
+                android:text="全部" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_1"
+                style="@style/radiobutton_title_style" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_2"
+                style="@style/radiobutton_title_style" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_3"
+                style="@style/radiobutton_title_style" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_4"
+                style="@style/radiobutton_title_style" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_5"
+                style="@style/radiobutton_title_style" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_type_6"
+                style="@style/radiobutton_title_style" />
+        </RadioGroup>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <RadioGroup
+            android:id="@+id/rg_child_home_title_time_anime"
+            style="@style/radiogroup_row_style" >
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_all"
+                style="@style/radiobutton_title_style"
+                android:checked="true"
+                android:text="不限" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2015"
+                style="@style/radiobutton_title_style"
+                android:text="2015" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2014"
+                style="@style/radiobutton_title_style"
+                android:text="2014" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2013"
+                style="@style/radiobutton_title_style"
+                android:text="2013" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2012"
+                style="@style/radiobutton_title_style"
+                android:text="2012" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2011"
+                style="@style/radiobutton_title_style"
+                android:text="2011" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_time_2010"
+                style="@style/radiobutton_title_style"
+                android:text="2010" />
+        </RadioGroup>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <RadioGroup
+            android:id="@+id/rg_child_home_title_favourite_anime"
+            style="@style/radiogroup_row_style" >
+
+            <RadioButton
+                android:id="@+id/rb_child_title_more_paly"
+                style="@style/radiobutton_title_style"
+                android:layout_marginLeft="@dimen/dp15"
+                android:gravity="left"
+                android:text="最多搜索" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_new_update"
+                style="@style/radiobutton_title_style"
+                android:gravity="left"
+                android:text="最新上线" />
+
+            <RadioButton
+                android:id="@+id/rb_child_title_comment_more"
+                style="@style/radiobutton_title_style"
+                android:gravity="left"
+                android:text="评论最多" />
+
+            <RadioButton style="@style/radiobutton_title_style" />
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

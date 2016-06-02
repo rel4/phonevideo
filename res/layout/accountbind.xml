@@ -1,0 +1,181 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/app_head_title" />
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginTop="@dimen/dp20" />
+
+    <RelativeLayout
+        android:id="@+id/rl_accountbind_current"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:id="@+id/tv_accountbind_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="手机号"
+            android:textColor="@color/word_black" />
+
+        <EditText
+            android:id="@+id/ed_accountbind_bindphone"
+            style="@style/base_edtitext"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@id/tv_accountbind_current"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp3"
+            android:background="@drawable/xgbd_dk" />
+
+        <EditText
+            android:id="@+id/et_accountbind_phonecheck"
+            style="@style/base_edtitext"
+            android:layout_width="@dimen/dp170"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@id/ed_accountbind_bindphone"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@drawable/xgbd_srk" />
+
+        <TextView
+            android:id="@+id/tv_accountbind_phonesend"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp44"
+            android:layout_alignRight="@+id/ed_accountbind_bindphone"
+            android:layout_below="@id/ed_accountbind_bindphone"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_toRightOf="@id/et_accountbind_phonecheck"
+            android:background="@drawable/shape_border_none_maincolorline"
+            android:gravity="center"
+            android:text="发送验证码"
+            android:textColor="@color/main_color" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp20"
+            android:layout_below="@+id/et_accountbind_phonecheck"
+            android:background="@color/bg_white" />
+
+        <TextView
+            android:id="@+id/tv_accountbind_bindphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ed_accountbind_bindphone"
+            android:layout_alignRight="@+id/ed_accountbind_bindphone"
+            android:layout_marginBottom="@dimen/dp2"
+            android:text="未绑定"
+            android:textColor="@color/word_black" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <TextView
+        android:id="@+id/tv_bind_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/shape_border_maincolor"
+        android:gravity="center"
+        android:text="绑定手机"
+        android:textColor="@color/bg_white" />
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginTop="@dimen/dp20" />
+
+    <RelativeLayout
+        android:id="@+id/rl_accountbind_other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:id="@+id/tv_accountbind_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="邮箱"
+            android:textColor="@color/word_black" />
+
+        <EditText
+            android:id="@+id/ed_accountbind_bindmail"
+            style="@style/base_edtitext"
+            android:layout_width="@dimen/dp330"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@id/tv_accountbind_mail"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp13"
+            android:background="@drawable/xgbd_dk" />
+
+        <EditText
+            android:id="@+id/ed_accountbind_mailcheck"
+            style="@style/base_edtitext"
+            android:layout_width="@dimen/dp170"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@id/ed_accountbind_bindmail"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:background="@drawable/xgbd_srk" />
+
+        <TextView
+            android:id="@+id/tv_accountbind_mailsend"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp44"
+            android:layout_alignRight="@+id/ed_accountbind_bindmail"
+            android:layout_below="@id/ed_accountbind_bindmail"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_toRightOf="@id/ed_accountbind_mailcheck"
+            android:background="@drawable/shape_border_none_maincolorline"
+            android:gravity="center"
+            android:text="发送验证码"
+            android:textColor="@color/main_color" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp20"
+            android:layout_below="@+id/tv_accountbind_mailsend"
+            android:background="@color/bg_white" />
+
+        <TextView
+            android:id="@+id/tv_accountbind_bindmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_accountbind_mail"
+            android:layout_alignBottom="@+id/tv_accountbind_mail"
+            android:layout_alignRight="@+id/ed_accountbind_bindmail"
+            android:text="未绑定"
+            android:textColor="@color/word_black" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <TextView
+        android:id="@+id/tv_bind_mail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/shape_border_maincolor"
+        android:gravity="center"
+        android:text="绑定手机"
+        android:textColor="@color/bg_white" />
+
+</LinearLayout>

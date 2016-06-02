@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+	<include layout="@layout/app_head_title"/>
+    <RadioGroup
+        android:id="@+id/rg_home_title_all_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/bg_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp5"
+        android:paddingTop="@dimen/dp5" >
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_featured"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_featured_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_china"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_china_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_tvb"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_tvb_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_jandk"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_jandk_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_america"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_america_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+
+        <RadioButton
+            android:id="@+id/rb_home_title_all_more"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/str_home_title_more_text"
+            android:textColor="@drawable/text_left_menu_selector"
+            android:textSize="@dimen/dp17" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/fl_home_content_all_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_home_content_all_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/custom_progress"
+            android:indeterminateDuration="700" />
+    </FrameLayout>
+
+</LinearLayout>

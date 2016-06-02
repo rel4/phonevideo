@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/app_head_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_merge_current"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp100"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:id="@+id/tv_merge_current"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/str_curretnaccount" />
+
+        <EditText
+            android:id="@+id/ed_merge_current"
+            android:layout_width="170dip"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@id/tv_merge_current"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/hbzh_srk" />
+
+        <TextView
+            android:id="@+id/tv_merge_phonevalidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_merge_current"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_toRightOf="@id/ed_merge_current"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/str_phonecheck"
+            android:textColor="@color/bg_shallowblack" />
+
+        <TextView
+            android:id="@+id/tv_merge_phonesend"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@id/tv_merge_current"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_toRightOf="@id/tv_merge_phonevalidate"
+            android:background="@drawable/hbzh_fs"
+            android:gravity="center"
+            android:text="@string/str_send" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_merge_other"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp100"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:id="@+id/tv_merge_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/str_otheraccoutn" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/ed_merge_other"
+            android:layout_width="170dip"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@id/tv_merge_other"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/hbzh_srk" />
+
+        <TextView
+            android:id="@+id/tv_merge_mailvalidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_merge_other"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_toRightOf="@id/ed_merge_other"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/str_mailcheck"
+            android:textColor="@color/bg_shallowblack" />
+
+        <TextView
+            android:id="@+id/tv_merge_mailsend"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp50"
+            android:layout_below="@id/tv_merge_other"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_toRightOf="@id/tv_merge_mailvalidate"
+            android:background="@drawable/hbzh_fs"
+            android:gravity="center"
+            android:text="@string/str_send" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ib_merge_merge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/hbzh_hb" />
+
+</LinearLayout>

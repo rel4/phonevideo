@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 副主色 -->
+    <color name="auxiliary_color">#76ba00</color>
+    <!-- 主颜色 -->
+    <color name="main_color">#3cb12f</color>
+    <!-- 标题颜色 -->
+    <color name="title_color">#3cb12f</color>
+    <!-- 底部颜色 -->
+    <color name="buttom_color">#3cb12f</color>
+    <!-- 灰白 -->
+    <color name="bg_greywhite">#efefef</color>
+    <!-- 分隔线 -->
+    <color name="bg_app_line">#dfdfdf</color>
+    <!-- 字体亮黑色 -->
+    <color name="word_lightblack">#323232</color>
+    <!-- 字体黑色 -->
+    <color name="word_content">#666666</color>
+    <!-- 字体黑色 -->
+    <color name="word_black">#525252</color>
+    <!-- 字体灰黑色 -->
+    <color name="word_greyblack">#8e8e8e</color>
+    <!-- 底部字体灰黑色 -->
+    <color name="buttom_word">#999</color>
+    <color name="bg_green">#01c675</color>
+    <color name="bg_shallow_green">#8801c675</color>
+    <!-- 灰色 -->
+    <color name="bg_gray">#C0C0C0</color>
+    <!-- 背景色 -->
+    <color name="bg_color">#f1f1f1</color>
+
+    <!-- 黑色 -->
+    <color name="bg_black">#000000</color>
+
+    <!-- 深黑色 -->
+    <color name="bg_dark_black">#464545</color>
+
+    <!-- 黑色 -->
+
+    <color name="bg_shallowblack">#A9A9A9</color>
+    <!-- 黑色 -->
+    <color name="bg_shallowyellow">#FFD700</color>
+    <!-- 字体浅黑色 -->
+    <color name="bg_light_black">#a000</color>
+
+    <!-- 白色 -->
+    <color name="bg_white">#ffffff</color>
+
+    <!-- 淡灰色 -->
+    <color name="bg_light_gray">#F5F5F5</color>
+    <!-- 透明色 -->
+    <color name="bg_transparent">#00000000</color>
+    <!-- 半透明 -->
+    <color name="bg_half_transparent">#88000000</color>
+    <!-- 根布局的底部颜色 -->
+    <color name="app_root_bg">#f1f1f1</color>
+    <!-- 布局描边线颜色 -->
+    <color name="app_line">#dddddd</color>
+    <!-- 黄色 -->
+    <color name="bg_yellow">#ffab00</color>
+    <!-- 红色 -->
+    <color name="bg_red">#fa4953</color>
+    <!-- 灰色字体 -->
+    <color name="bg_gray_fortext">#fa4953</color>
+    <!-- 灰色线条在上网必备里的线条 -->
+    <color name="app_line_network">#ededed</color>
+    <!-- 灰色字体 -->
+    <color name="bg_text_gray">#999999</color>
+    <!-- 评论字体 -->
+    <color name="bg_user_name_text">#506ea0</color>
+    <color name="bg_voice_line">#cfe8ff</color>
+    <color name="line_fl_text">#bdbdbd</color>
+    <color name="bg_fl_text_content">#e8e8e8</color>
+    <color name="subscribe_activity_bg">#ffefefef</color>
+    <color name="subscribe_bg">#fff5f5f5</color>
+    <color name="subscribe_tip_text">#ff2e2e2e</color>
+    <color name="subscribe_seperate_line">#ffcdcdcd</color>
+    <color name="subscribe_item_selected_stroke">#ffcc3131</color>
+    <color name="subscribe_item_text_color_pressed">#ffb9b9b9</color>
+    <color name="default_text_night">#ff747474</color>
+    <color name="default_text">#ff454545</color>
+
+    <item name="subscribe_item_text_color_normal" type="color">@color/default_text</item>
+
+</resources>

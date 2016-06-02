@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/app_head_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_nickname_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" >
+
+        <EditText
+            android:id="@+id/et_nickname_name"
+            style="@style/base_edtitext"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="#ffffff"
+            android:maxLength="12"
+            android:text="@string/str_name" />
+
+        <ImageButton
+            android:id="@+id/ib_nickname_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/ss_sc" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp15"
+        android:text="12个字母、数字、中文"
+        android:textColor="#999999" />
+
+</LinearLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_cachinglist_head"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp80"
+        android:layout_centerHorizontal="true"
+        android:background="@color/bg_white" >
+        <ImageView
+            android:id="@+id/iv_cachinglist_pic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/hc"
+            android:src="@drawable/hc_an" />
+
+        <TextView
+            android:id="@+id/tv_cachinglist_loadingnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_cachinglist_pic"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toRightOf="@+id/iv_cachinglist_pic"
+            android:text="正在下载中"
+             android:textSize="12sp"
+            android:textColor="@color/bg_light_black" />
+
+        <TextView
+            android:id="@+id/ib_cachinglist_numberpic"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignBottom="@+id/tv_cachinglist_loadingnumber"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/tv_cachinglist_loadingnumber"
+            android:background="@drawable/shape_red_circle"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/bg_white"
+            android:textSize="@dimen/dp10" />
+
+        <ProgressBar
+            android:max="100"
+            android:id="@+id/pb_cachinglist_progress"
+            style="@style/app_ProgressBar_Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_cachinglist_loadingnumber"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp30" />
+
+        <TextView
+            android:id="@+id/tv_cachinglist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_cachinglist_pic"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toRightOf="@+id/iv_cachinglist_pic"
+            android:layout_marginRight="@dimen/dp30"
+            android:gravity="center"
+            android:singleLine="true"
+            android:enabled="true"
+            android:textSize="12sp"
+            android:textColor="@color/bg_black" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/wd_jr" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_mydata_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp0.2"
+        android:layout_below="@id/rl_cachinglist_head"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="#BFBFBFBF" />
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="vertical" >
+
+            <View style="@style/horizontal_partition_line_style" />
+
+            <RelativeLayout
+                android:id="@+id/rl_my_space_user_date"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp70"
+                android:background="@color/bg_white"
+                android:clickable="true"
+                android:focusable="true" >
+
+                <FrameLayout
+                    android:id="@+id/fl_user_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/dp7"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp7" >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp50"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tx_ds" />
+
+                    <com.limaoso.phonevideo.view.CircleImageView
+                        android:id="@+id/iv_left_user_icon"
+                        android:layout_width="@dimen/dp45"
+                        android:layout_height="@dimen/dp45"
+                        android:layout_gravity="center" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@id/fl_user_icon"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_mysapce_nickname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/bg_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_myspace_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/word_black"
+                        android:textSize="@dimen/dp16" />
+
+                    <TextView
+                        android:id="@+id/tv_myspace_integral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/word_black"
+                        android:textSize="@dimen/dp16"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/dp15"
+                    android:src="@drawable/wd_jr" />
+            </RelativeLayout>
+
+            <View style="@style/horizontal_partition_line_style" />
+
+            <View
+                style="@style/horizontal_partition_line_style"
+                android:layout_marginTop="@dimen/dp15" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15" >
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_space_record"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp44"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_myspace_jl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/jl" />
+
+                    <TextView
+                        style="@style/my_space_button_style"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_toRightOf="@+id/iv_myspace_jl"
+                        android:text="记录"
+                        android:textColor="@color/bg_dark_black" />
+
+                    <ImageView style="@style/my_space_go_style" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontal_partition_line_style"
+                    android:layout_marginLeft="@dimen/dp30" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_space_cache"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp44"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_myspace_xz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/xz" />
+
+                    <TextView
+                        style="@style/my_space_button_style"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_toRightOf="@+id/iv_myspace_xz"
+                        android:text="缓存"
+                        android:textColor="@color/bg_dark_black" />
+
+                    <ImageView
+                        style="@style/my_space_go_style"
+                        android:layout_marginLeft="@dimen/dp30" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontal_partition_line_style"
+                    android:layout_marginLeft="@dimen/dp30" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_space_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp44"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_myspace_sc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/sc" />
+
+                    <TextView
+                        style="@style/my_space_button_style"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_toRightOf="@+id/iv_myspace_sc"
+                        android:text="收藏"
+                        android:textColor="@color/bg_dark_black" />
+
+                    <ImageView style="@style/my_space_go_style" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/horizontal_partition_line_style"
+                    android:layout_marginLeft="@dimen/dp30" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_my_space_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp44"
+                    android:background="@color/bg_white"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/iv_myspace_sz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/sz" />
+
+                    <TextView
+                        style="@style/my_space_button_style"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:layout_toRightOf="@+id/iv_myspace_sz"
+                        android:text="设置"
+                        android:textColor="@color/bg_dark_black" />
+
+                    <ImageView
+                        style="@style/my_space_go_style"
+                        android:layout_marginLeft="@dimen/dp30" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout
+                style="@style/relative_layout_home_and_search"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="精彩推荐"
+                    android:textColor="@color/bg_dark_black" />
+
+                <ImageView
+                    android:id="@+id/iv_myspace_recommend"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <com.limaoso.phonevideo.view.MyGridView
+                android:id="@+id/gv_my_space_recommend_show"
+                style="@style/home_pager_movies_style"
+                android:scrollbars="none" >
+            </com.limaoso.phonevideo.view.MyGridView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

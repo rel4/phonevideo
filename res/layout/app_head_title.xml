@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_head_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_no_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/main_color"
+        android:visibility="visible" >
+
+        <!-- 左侧菜单栏按钮 -->
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:src="@drawable/sy_zc_gd"
+            android:visibility="gone" />
+        <!-- 左边返回按钮 -->
+
+        <ImageButton
+            android:id="@+id/ibtn_left_home_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp15"
+            android:src="@drawable/bfq_qp_db_fh"
+            android:visibility="visible" />
+
+        <!-- 搜索框布局 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_channel_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/btn_menu"
+            android:background="@drawable/sy_srk"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/et_channel_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入关键词"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:textColorHint="#ddd"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/ibtn_channel_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:src="@drawable/sy_bd_ss" />
+        </RelativeLayout>
+        <!-- 标题名称 -->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="----"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="visible" />
+        <!-- 右边查找按钮 -->
+
+        <ImageButton
+            android:id="@+id/ibtn_left_home_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:src="@drawable/fdj_lbj"
+            android:visibility="gone" />
+        <!-- 右边编辑按钮 -->
+
+        <Button
+            android:id="@+id/ibtn_left_home_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:text="编辑"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ibtn_left_home_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:text="保存"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:background="#009e5d" />
+
+</LinearLayout>

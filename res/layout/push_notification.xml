@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/app_head_title" />
+
+    <RelativeLayout
+        android:id="@+id/rl_get_notice_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="@string/str_notification_get_time"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <TextView
+            android:id="@+id/tv_show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:padding="@dimen/dp6"
+            android:text="-:---:-"
+            android:textColor="@color/word_black" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/bg_white" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@color/app_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="@string/str_news_notification"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_push_message_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/bg_white" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="@string/str_news_system"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_push_system_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15" />
+    </RelativeLayout>
+
+</LinearLayout>

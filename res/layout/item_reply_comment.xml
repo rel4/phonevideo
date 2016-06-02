@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10" >
+
+        <com.limaoso.phonevideo.view.CircleImageView
+            android:id="@+id/iv_reply_user_iocn"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:src="@drawable/fx_tp" />
+
+        <TextView
+            android:id="@+id/tv_reply_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/iv_reply_user_iocn"
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:singleLine="true"
+            android:text="@string/str_init_text"
+            android:textColor="@color/bg_text_gray" />
+
+        <TextView
+            android:id="@+id/tv_reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:text="--:--:--"
+            android:textColor="@color/bg_text_gray" />
+    </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_reply_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp7"
+            android:layout_marginBottom="@dimen/dp7"
+            android:text="@string/str_init_text"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_reply_movie_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp4"
+        android:background="@drawable/hf_zjls"
+        android:ellipsize="end"
+        android:maxEms="20"
+        android:singleLine="true"
+        android:textColor="@color/bg_text_gray" />
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15" />
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_light_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/app_head_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@color/bg_white" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:gravity="center_vertical"
+                android:text="日期"
+                android:textColor="@color/bg_black" />
+
+            <TextView
+                android:id="@+id/tv_date_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp15"
+                android:gravity="center_vertical"
+                android:text="1994-08-04"
+                android:textColor="@color/bg_black" />
+        </RelativeLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_above="@+id/ll_date_scroll"
+            android:layout_marginTop="10dp"
+            android:background="#999999" />
+
+        <LinearLayout
+            android:id="@+id/ll_date_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.limaoso.phonevideo.widget.wheelview.WheelView
+                    android:id="@+id/year"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1" />
+
+                <com.limaoso.phonevideo.widget.wheelview.WheelView
+                    android:id="@+id/month"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1" />
+
+                <com.limaoso.phonevideo.widget.wheelview.WheelView
+                    android:id="@+id/day"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="1dp"
+                android:background="#999999" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

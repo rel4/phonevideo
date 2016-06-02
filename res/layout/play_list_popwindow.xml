@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:text="切换播放来源" />
+
+        <ImageView
+            android:id="@+id/popu_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/dp15"
+            android:src="@drawable/invertselection" />
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_comment_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+</LinearLayout>

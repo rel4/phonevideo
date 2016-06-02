@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f1f1"
+        android:orientation="vertical" >
+
+        <View
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <include layout="@layout/show_new_movies" />
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_recommend"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_recommend"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="精彩推荐" />
+
+                <ImageView
+                    android:id="@+id/iv_home_2"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <com.limaoso.phonevideo.view.MyGridView
+                android:id="@+id/gv_home_recommend"
+                style="@style/home_pager_movies_style" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_movies"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_movies"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="电影" />
+
+                <ImageView
+                    android:id="@+id/iv_home_3"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <com.limaoso.phonevideo.view.MyGridView
+                android:id="@+id/gv_home_movie"
+                style="@style/home_pager_movies_style" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_tv"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_tv"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="电视" />
+
+                <ImageView
+                    android:id="@+id/iv_home_4"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_home_tv"
+                style="@style/home_pager_movies_style" >
+            </GridView>
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_cartoon"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_cartoon"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="动漫" />
+
+                <ImageView
+                    android:id="@+id/iv_home_5"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_home_anime"
+                style="@style/home_pager_movies_style" >
+            </GridView>
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_video"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_video"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="视频" />
+
+                <ImageView
+                    android:id="@+id/iv_home_6"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/gv_home_video"
+                style="@style/home_pager_movies_style"
+                android:scrollbars="none" >
+            </GridView>
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <View
+            android:id="@+id/view_fhp_top"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginTop="@dimen/dp15" />
+
+        <LinearLayout
+            android:id="@+id/ll_fhp_top"
+            style="@style/linear_layout_home_and_search" >
+
+            <RelativeLayout style="@style/relative_layout_home_and_search" >
+
+                <TextView
+                    style="@style/text_home_and_search"
+                    android:text="小视频" />
+
+                <ImageView
+                    android:id="@+id/iv_home_7"
+                    style="@style/image_home_and_search" />
+            </RelativeLayout>
+
+            <com.limaoso.phonevideo.view.MyGridView
+                android:id="@+id/gv_home_top"
+                style="@style/home_pager_movies_style" >
+            </com.limaoso.phonevideo.view.MyGridView>
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+    </LinearLayout>
+
+</ScrollView>

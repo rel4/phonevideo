@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/qdy_bj"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/iv_register_logo"
+        android:layout_width="@dimen/dp120"
+        android:layout_height="@dimen/dp120"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp75"
+        android:src="@drawable/register_icon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp50"
+        android:layout_marginRight="@dimen/dp50"
+        android:layout_marginTop="@dimen/dp30"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10" >
+
+            <TextView
+                android:id="@+id/user_name_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/user_name"
+                android:maxLength="20"
+                android:text="LM27515625"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/dp22" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:drawableLeft="@drawable/qdx_zh"
+                android:drawablePadding="@dimen/dp5"
+                android:text="账号："
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/dp22" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line"
+            style="@style/horizontal_partition_line_style"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginTop="@dimen/dp5" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pass_word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/pwd_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/qdy_mm"
+                android:drawablePadding="@dimen/dp7"
+                android:text="密码："
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/dp22" />
+
+            <TextView
+                android:id="@+id/user_password_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/pwd_name"
+                android:maxLength="20"
+                android:text="LM2515932"
+                android:textColor="@color/bg_white"
+                android:textSize="@dimen/dp22" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp70"
+            android:layout_marginTop="@dimen/dp12"
+            android:paddingBottom="@dimen/dp5"
+            android:paddingTop="@dimen/dp5" >
+
+            <TextView
+                android:id="@+id/tv_home_page"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_border_white"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingTop="@dimen/dp10"
+                android:text="进入首页"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/dp22" />
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginLeft="@dimen/dp17"
+                android:background="@drawable/qdy_hq"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="@dimen/dp20" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_setting_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/shape_border_white"
+            android:gravity="center"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingTop="@dimen/dp10"
+            android:text="马上去设置"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/dp22" />
+    </LinearLayout>
+
+</LinearLayout>

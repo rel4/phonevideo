@@ -1,0 +1,304 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light_gray"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <include layout="@layout/app_head_title" />
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginTop="@dimen/dp15" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mydata_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white" >
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_loginname"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44" >
+
+            <ImageButton
+                android:id="@+id/ib_mydata_loginname"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="账户"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tv_mydata_loginname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:textColor="@color/bg_shallowblack" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_mydata_loginname"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@id/rl_mydata_loginname"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/app_line_network" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_head"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp70"
+            android:layout_below="@+id/v_mydata_loginname" >
+
+            <TextView
+                android:id="@+id/tv_mydata_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="@string/str_headicon"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/dp40" >
+
+                <ImageView
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_gravity="center"
+                    android:src="@drawable/tx_ds" />
+
+                <com.limaoso.phonevideo.view.CircleImageView
+                    android:id="@+id/ib_mydata_headicon"
+                    android:layout_width="@dimen/dp45"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_gravity="center" />
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_mydata_head"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/wd_jr" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_mydata_linehead"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@id/rl_mydata_head"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/app_line_network" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_nickname"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@+id/v_mydata_linehead" >
+
+            <ImageButton
+                android:id="@+id/ib_mydata_nickname"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="#ffffff" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="昵称"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tv_mydata_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp40"
+                android:textColor="@color/bg_shallowblack" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_mydata_nickname"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/wd_jr" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_mydata_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp1"
+            android:layout_below="@id/rl_mydata_nickname"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/app_line_network" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_date"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@+id/v_mydata_gender" >
+
+            <ImageButton
+                android:id="@+id/ib_mydata_date"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/bg_white" />
+
+            <TextView
+                android:id="@+id/tv_mydata_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="出生日期"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <TextView
+                android:id="@+id/tv_mydata_birthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp40"
+                android:gravity="center_vertical"
+                android:textColor="@color/bg_shallowblack" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_mydata_date"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/wd_jr" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginTop="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_mydata_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white" >
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_bind"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44" >
+
+            <ImageButton
+                android:id="@+id/ib_mydata_bind"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/bg_white" />
+
+            <TextView
+                android:id="@+id/tv_mydata_accountbind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="帐号绑定"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_mydata_accountbind"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/wd_jr" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_mydata_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp0.2"
+            android:layout_below="@id/rl_mydata_bind"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/app_line_network" />
+
+        <RelativeLayout
+            android:id="@+id/rl_mydata_password"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp44"
+            android:layout_below="@+id/v_mydata_bind" >
+
+            <ImageButton
+                android:id="@+id/ib_mydata_password"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp50"
+                android:background="@color/bg_white" />
+
+            <TextView
+                android:id="@+id/tv_mydata_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="修改密码"
+                android:textColor="@color/bg_black"
+                android:textSize="@dimen/dp16" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_mydata_password"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/wd_jr" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <TextView
+        android:id="@+id/tv_mydata_quit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/shape_border_maincolor"
+        android:gravity="center"
+        android:paddingBottom="@dimen/dp15"
+        android:paddingTop="@dimen/dp15"
+        android:text="退出登录"
+        android:textColor="@color/bg_white"
+        android:textSize="@dimen/dp15" />
+
+</LinearLayout>

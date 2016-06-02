@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<string name="UMBreak_Network">网络连接有问题，安装失败</string>
+	<string name="UMUpdateTitle">New version found</string>
+	<string name="UMNewVersion">最新版本: </string>
+	<string name="UMUpdateContent">更新内容</string>
+	<string name="UMUpdateSize">更新大小: </string>
+	<string name="UMTargetSize">文件大小: </string>
+	<string name="UMGprsCondition">网络连接有问题</string>
+	<string name="UMUpdateNow">马上更新</string>
+	<string name="UMAppUpdate">狸猫搜索正在下载</string>
+	<string name="UMNotNow">以后再说</string>
+	<string name="UMIgnore">忽略本次更新</string>
+	<string name="UMToast_IsUpdating">正在更新....</string>
+	<string name="UMDialog_InstallAPK">这个版本已经下载, 现在按装吗 ?</string>
+	<string name="UMUpdateCheck">2.6.0.1.20150312</string>
+    
+</resources>

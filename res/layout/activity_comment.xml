@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_root_bg"
+    android:orientation="vertical" >
+
+    <include layout="@layout/app_head_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:paddingTop="@dimen/dp15" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.limaoso.phonevideo.view.CircleImageView
+                android:id="@+id/iv_comment_icon"
+                android:layout_width="@dimen/dp55"
+                android:layout_height="@dimen/dp55"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="("
+                    android:textColor="@color/bg_text_gray"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_comment_dialogue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:src="@drawable/hf" />
+
+                <TextView
+                    android:id="@+id/tv_comment_reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text=":  )"
+                    android:textColor="@color/bg_text_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/iv_comment_icon"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_comment_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp10"
+                    android:text="@string/str_init_text"
+                    android:textColor="@color/bg_text_gray"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_comment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--:--:--"
+                    android:textColor="@color/bg_text_gray"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_comment_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="内容"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/rl_comment_input"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/dp10"
+            android:paddingLeft="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            android:paddingTop="@dimen/dp10" >
+
+            <EditText
+                android:id="@+id/et_comment_etComment"
+                android:layout_width="@dimen/dp0"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginRight="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape"
+                android:cursorVisible="true"
+                android:focusable="true"
+                android:hint="输入评论"
+                android:paddingLeft="@dimen/dp10"
+                android:textColor="@color/bg_light_black"
+                android:textCursorDrawable="@null"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_comment_SendComment"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp50"
+                android:background="@drawable/btn_shape"
+                android:focusable="false"
+                android:paddingLeft="@dimen/dp20"
+                android:paddingRight="@dimen/dp20"
+                android:text="发送"
+                android:textColor="@color/bg_light_black"
+                android:textSize="17sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View style="@style/horizontal_partition_line_style" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/rl_comment_input"
+            android:paddingTop="@dimen/dp15" >
+
+            <com.handmark.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/ptr_comment_reponse"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_white"
+                android:divider="#00000000"
+                android:dividerHeight="0dip"
+                android:listSelector="#00000000" >
+            </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

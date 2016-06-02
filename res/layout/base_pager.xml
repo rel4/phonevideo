@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ll_home_title_page"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/iv_basepager_headicon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp20" >
+
+            <ImageButton
+                android:id="@+id/iv_left_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:background="@null"
+                android:src="@drawable/sy_zc_gd" />
+
+            <ImageView
+                android:layout_width="@dimen/dp160"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/sy_lg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp85"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/sy_srk" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <EditText
+                android:id="@+id/et_home_find"
+                android:layout_width="@dimen/dp330"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:cursorVisible="false"
+                android:gravity="center"
+                android:hint="最新最热 即搜即播"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:textColorHint="#ddd"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_basepager_skey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/et_home_find"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dp8"
+                android:text="捉妖记"
+                android:textColor="#ddd"
+                android:textSize="15sp" />
+
+            <ImageButton
+                android:id="@+id/ibtn_home_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@null"
+                android:src="@drawable/sy_bd_ss" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#9000"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_home_featured"
+                style="@style/BottomTabStyle"
+                android:text="精选"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/btn_home_movie"
+                style="@style/BottomTabStyle"
+                android:text="电影"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/btn_home_top"
+                style="@style/BottomTabStyle"
+                android:text="小视频"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/btn_home_occupied1"
+                style="@style/BottomTabStyle"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/btn_home_occupied2"
+                style="@style/BottomTabStyle"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/btn_home_tvplay"
+                style="@style/BottomTabStyle"
+                android:text="电视"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/btn_home_anime"
+                style="@style/BottomTabStyle"
+                android:text="动漫"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/btn_home_video"
+                style="@style/BottomTabStyle"
+                android:text="视频"
+                android:textSize="17sp"
+                android:visibility="gone" />
+
+            <RadioButton
+                android:id="@+id/btn_home_more"
+                style="@style/BottomTabStyle"
+                android:text="更多"
+                android:textSize="17sp"
+                android:visibility="gone" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_home_pager"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/title_color"
+        android:visibility="gone" >
+
+        <!-- 左侧菜单栏按钮 -->
+
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp15"
+            android:src="@drawable/sy_zc_gd"
+            android:visibility="gone" />
+        <!-- 左边返回按钮 __返回个人中心 -->
+
+        <ImageButton
+            android:id="@+id/ibtn_left_home_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp15"
+            android:src="@drawable/bfq_qp_db_fh"
+            android:visibility="gone" />
+        <!-- 左边返回按钮 __返回主界面 -->
+
+        <ImageButton
+            android:id="@+id/ibtn_left_home_back_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="@dimen/dp15"
+            android:src="@drawable/bfq_qp_db_fh"
+            android:visibility="visible" />
+
+        <!-- 搜索框布局 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_channel_find"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/btn_menu"
+            android:background="@drawable/sy_srk"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/et_channel_find"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="请输入关键词"
+                android:paddingBottom="10dp"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                android:textColorHint="#ddd"
+                android:textSize="16sp" />
+
+            <ImageButton
+                android:id="@+id/ibtn_channel_find"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:src="@drawable/sy_bd_ss" />
+        </RelativeLayout>
+        <!-- 标题名称 -->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="我的页面"
+            android:textColor="#fff"
+            android:textSize="22sp"
+            android:visibility="visible" />
+        <!-- 右边查找按钮 -->
+
+        <ImageButton
+            android:id="@+id/ibtn_left_home_search"
+            android:layout_width="@dimen/dp50"
+            android:layout_height="@dimen/dp50"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/fdj_lbj" />
+
+        <!-- 右边编辑按钮 -->
+
+        <TextView
+            android:id="@+id/tv_base_page_right_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@null"
+            android:text="编辑"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:background="@color/title_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_base_page_delete_or_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/bg_white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/app_line_network" />
+
+            <View
+                android:layout_width="@dimen/dp1"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/app_line_network" />
+
+            <Button
+                android:id="@+id/btn_base_page_all_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:text="全部清除"
+                android:textColor="@color/bg_dark_black"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_alignParentBottom="true"
+                android:background="@color/app_line_network" />
+
+            <Button
+                android:id="@+id/btn_base_page_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:text="取消"
+                android:textColor="@color/bg_dark_black"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/fl_base_pager_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_base_pager_progress"
+            android:layout_width="@dimen/dp20"
+            android:layout_height="@dimen/dp20"
+            android:layout_gravity="center"
+            android:indeterminateDrawable="@drawable/custom_progress"
+            android:indeterminateDuration="700" />
+    </FrameLayout>
+
+</LinearLayout>

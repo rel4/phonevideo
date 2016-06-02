@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/app_head_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_light_gray"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dp15" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15" >
+
+                <com.limaoso.phonevideo.view.MyGridView
+                    android:id="@+id/gv_net_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="@dimen/dp2"
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="@dimen/dp2" >
+                </com.limaoso.phonevideo.view.MyGridView>
+
+                <View
+                    style="@style/horizontal_partition_line_style"
+                    android:layout_alignParentTop="true" />
+
+                <View
+                    style="@style/horizontal_partition_line_style"
+                    android:layout_alignParentBottom="true" />
+
+                <View
+                    style="@style/vertical_partition_line_style"
+                    android:layout_alignParentLeft="true" >
+                </View>
+
+                <View
+                    style="@style/vertical_partition_line_style"
+                    android:layout_alignParentRight="true" >
+                </View>
+            </RelativeLayout>
+
+            <View
+                style="@style/horizontal_partition_line_style"
+                android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:lines="1"
+                        android:text="@string/str_game_app_text"
+                        android:textColor="#999999"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_network_refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:paddingBottom="@dimen/dp15"
+                        android:paddingTop="@dimen/dp15"
+                        android:src="@drawable/sy_hyh" />
+                </RelativeLayout>
+
+                <com.limaoso.phonevideo.view.MyGridView
+                    android:id="@+id/gv_network_game_app"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="@dimen/dp16"
+                    android:numColumns="5"
+                    android:verticalSpacing="10dp" >
+                </com.limaoso.phonevideo.view.MyGridView>
+            </LinearLayout>
+
+            <View style="@style/horizontal_partition_line_style" />
+
+            <View
+                style="@style/horizontal_partition_line_style"
+                android:layout_marginTop="@dimen/dp15" />
+
+            <include layout="@layout/show_new_movies" />
+
+            <View style="@style/horizontal_partition_line_style" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp15"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

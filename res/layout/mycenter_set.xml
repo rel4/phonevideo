@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/app_head_title" />
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="跳过片头片尾"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_setting_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="连续播放"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_setting_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="使用2G/3G/4G网络 "
+            android:textColor="@color/bg_dark_black" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_setting_useweb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="非wifi网络播放提醒"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <com.limaoso.phonevideo.view.MySwitch
+            android:id="@+id/ms_setting_noticeweb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/myceterset_propelling_message"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <TextView
+            android:id="@+id/tv_myceterset_propelling_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="推送消息"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/wd_jr" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/myceterset_guideuser"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/wd_jr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="新手指南"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+    </RelativeLayout>
+
+    <View style="@style/horizontal_partition_line_style" />
+
+    <RelativeLayout
+        android:id="@+id/myceterset_aboutlimao"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_gravity="center"
+        android:background="@color/bg_white"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/wd_jr" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="关于狸猫"
+            android:textColor="@color/bg_dark_black"
+            android:textSize="@dimen/dp15" />
+    </RelativeLayout>
+
+</LinearLayout>

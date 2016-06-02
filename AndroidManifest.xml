@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.limaoso.phonevideo"
+    android:versionCode="36"
+    android:versionName="0.5" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    <!-- 必选 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+    <!-- 【必选】用以设置前台是否显示通知 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- app -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" >
+    </uses-permission>
+    <!-- ###################声明SDK使用的相关权限###################### -->
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- QQ、QQ空间所需权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name=".global.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launch"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".top.TopActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".top.ChannelActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".play.PlayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!--
+                     <data
+                    android:host="limao.playactivity"
+                    android:scheme="limaoso" />
+                -->
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".play.PlayCommentActivity"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name=".play.PlaySourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="limao.playourceactivity"
+                    android:scheme="limaoso" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" >
+        </activity>
+        <activity
+            android:name=".activity.PlayActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="limao.playactivity"
+                    android:scheme="limaoso" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name=".activity.APPDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.BirthdayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.NetworkMenuDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.PlayCacheAcivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.WebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.home.MovieActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.home.VideoActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.home.TVplayActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.home.AnimeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.menu.CacheDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.AlertDialogActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.MostHtmlActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.MoviesDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.menu.RecordDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.RecommendDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.GuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.SelectPicPopupWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".activity.SelectGenderWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".activity.MyDataActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.CollectDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.NickNameActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.MergeActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.menu.CacheActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.RecommendMenuDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.VIPMenuDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.menu.InformMenuDetailActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.PushNotificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.menu.CacheLoadAcitity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.ModifyPasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.AccountBindActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".activity.SearchResultPageMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" />
+        <activity
+            android:name=".activity.MyCollectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" />
+        <activity
+            android:name=".activity.PlaySourceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="limao.playourceactivity"
+                    android:scheme="limaoso" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.CommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".testActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".activity.menu.MyCenwterSetActivity" />
+        <activity
+            android:name=".activity.SelectTimeFrameWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogStyleBottom" />
+        <activity
+            android:name=".activity.QuitLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" >
+        </activity>
+        <activity
+            android:name=".activity.menu.SettingMenuDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+            android:name=".activity.SelectPlayNumActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Translucent.PageIndicatorDefaults" >
+        </activity>
+        <activity
+            android:name=".activity.CommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyCommentList" />
+        <activity
+            android:name=".activity.RetrievePasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" />
+
+        <!-- ###################注册SDK使用的Activity###################### -->
+        <!-- 分享编辑页 -->
+        <activity
+            android:name="com.umeng.socialize.view.ShareActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Theme.UMDialog"
+            android:windowSoftInputMode="stateVisible|adjustResize" >
+        </activity>
+
+        <!-- ############ QQ空间和QQ SSO授权的Activity注册 ############ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- 100424468，如果你使用的公用账号，则不需要修改；否则修改成你在QQ开放平台申请的 APP ID -->
+                <data android:scheme="tencent100424468" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <!-- Update Activitys Start -->
+        <activity
+            android:name="com.umeng.update.UpdateDialogActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <!-- Update Activitys End -->
+
+        <service
+            android:name="com.umeng.update.net.DownloadingService"
+            android:process=":DownloadingService" >
+        </service>
+        <!-- P2P -->
+        <service android:name="com.limaoso.phonevideo.service.P2pService" >
+        </service>
+
+        <!-- AppService -->
+        <service android:name="com.limaoso.phonevideo.db.AppService" >
+        </service>
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 友盟 监听通知点击或者忽略处理的广播 -->
+        <receiver
+            android:name="com.umeng.message.NotificationProxyBroadcastReceiver"
+            android:exported="false" >
+        </receiver>
+
+        <!-- 监听开机运行、网络连接变化、卸载的广播 -->
+        <receiver
+            android:name="com.umeng.message.SystemReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听消息到达的广播 -->
+        <receiver
+            android:name="com.umeng.message.MessageReceiver"
+            android:exported="false"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.RECEIVE" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听宿主选举的广播 -->
+        <receiver
+            android:name="com.umeng.message.ElectionReceiver"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.ELECTION_RESULT_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 监听注册的广播 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <receiver
+            android:name="com.umeng.message.RegistrationReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.limaoso.phonevideo.intent.action.COMMAND" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.umeng.message.UmengMessageBootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- 可以根据需要自行设置 android:label 中的服务名 ： -->
+
+
+        <!-- Umeng的长连服务，用来建立推送的长连接的 -->
+        <!-- 【应用包名】字符串需要替换成本应用的应用包名 -->
+        <service
+            android:name="com.umeng.message.UmengService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="com.limaoso.phonevideo.intent.action.START" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.limaoso.phonevideo.intent.action.COCKROACH" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.agoo.android.intent.action.PING_V4" />
+
+                <category android:name="umeng" />
+            </intent-filter>
+        </service>
+
+        <!-- Umeng的消息接收服务 -->
+        <service
+            android:name="com.umeng.message.UmengIntentService"
+            android:process=":push" />
+
+        <!-- Umeng的消息路由服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageIntentReceiverService"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <action android:name="org.android.agoo.client.MessageReceiverService" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.android.agoo.client.ElectionReceiverService" />
+            </intent-filter>
+        </service>
+
+        <!-- v2.4.1添加的Service，Umeng的消息接收后的处理服务 -->
+        <service
+            android:name="com.umeng.message.UmengMessageCallbackHandlerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.umeng.messge.registercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.unregistercallback.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.message.handler.action" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.umeng.message.autoupdate.handler.action" />
+            </intent-filter>
+        </service>
+
+        <!-- V1.3.0添加的service，负责下载通知的资源 -->
+        <service android:name="com.umeng.message.UmengDownloadResourceService" />
+
+        <!-- V2.5.0添加的Service，用于本地通知 -->
+        <!-- 如果不使用本地通知，可以注释掉本地通知服务的配置 -->
+        <service
+            android:name="com.umeng.message.local.UmengLocalNotificationService"
+            android:exported="false" />
+        <!-- facebook相关 -->
+        <!--
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        -->
+        <!-- ###################添加UmengAppkey###################### -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5620b93367e58e7af30030a2" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="5620b93367e58e7af30030a2" >
+            <meta-data
+                android:name="UMENG_CHANNEL"
+                android:value="main" />
+        </meta-data>
+    </application>
+
+</manifest>

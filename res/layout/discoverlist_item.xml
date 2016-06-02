@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res/com.limaoso.phonevideo"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp90"
+        android:background="@color/bg_white" >
+
+        <com.limaoso.phonevideo.view.RoundedImageView
+            android:id="@+id/iv_discoverlist_icon"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp15"
+            android:src="@drawable/fx_tp" />
+
+        <TextView
+            android:id="@+id/tv_discoverlist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_discoverlist_icon"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_toRightOf="@id/iv_discoverlist_icon"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="名称"
+            android:textColor="@color/bg_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_discoverlist_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_discoverlist_icon"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_toRightOf="@id/iv_discoverlist_icon"
+            android:text="7546"
+            android:textColor="@color/bg_yellow"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_discoverlist_icon"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp1"
+            android:layout_toRightOf="@id/tv_discoverlist_number"
+            android:text="人使用过"
+            android:textColor="@color/bg_gray"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_discoverlist_try"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp35"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/discover_selectstyle"
+            android:gravity="center"
+            android:text="下载"
+            android:textColor="@drawable/color_white_greyblack_selectstyle"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/horizontal_partition_line_style"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp2" />
+
+</LinearLayout>

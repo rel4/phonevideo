@@ -1,0 +1,22 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 渐变 -->
+    <gradient
+        android:angle="90"
+        android:centerColor="@color/bg_light_gray"
+        android:endColor="@color/bg_light_gray"
+        android:startColor="@color/bg_light_gray" />
+    <!-- 描边 -->
+    <stroke
+        android:dashGap="0dp"
+        android:dashWidth="0dp"
+        android:width="1dp"
+        android:color="@color/bg_gray" />
+    <!-- 圆角 -->
+    <corners
+        android:bottomLeftRadius="3dp"
+        android:bottomRightRadius="3dp"
+        android:topLeftRadius="3dp"
+        android:topRightRadius="3dp" />
+
+</shape>

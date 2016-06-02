@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp15"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_system_reply_name"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_init_text"
+             android:layout_marginBottom="@dimen/dp4"
+            android:textSize="17sp"
+            android:textColor="@color/bg_dark_black" />
+
+        <TextView
+             android:id="@+id/tv_system_reply_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp15"
+            android:text="--:--:--"
+            android:textColor="@color/bg_text_gray" />
+    </LinearLayout>
+
+    <ImageView
+         android:id="@+id/iv_system_reply_go_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp15"
+        android:src="@drawable/zc_jr" />
+    
+      <View 
+        
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        style="@style/horizontal_partition_line_style" />
+
+</RelativeLayout>
